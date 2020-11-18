@@ -1,0 +1,50 @@
+{% load static %}
+<div class="navbar-fixed">
+    <nav class="white lighten-5 navbar-fixed">
+        <div class="nav-wrapper">
+            <a href="#!" style="margin-left: 25px;" id="myToggler" class="left brand-logo grey-text lighten-2">
+                Nutrition | Advisor
+            </a>
+
+            <!-- <ul class="right hide-on-med-and-down">
+                <li><a href="" title="user-view"><i
+                            class="material-icons grey-text lighten-2">format_list_bulleted</i></a></li>
+                <li><a href="" title="Add New Child"><i class="material-icons grey-text lighten-2">add</i></a></li>
+                <li><a href="" title="Birth Analysis"><i class="material-icons grey-text lighten-2">insert_chart</i></a>
+                </li>
+                <li><a href="" title=""><img style="height: 40px; width: 40px; margin-right: 25px;" class="circle"
+                            src="{% static 'img/jg.jpeg' %}"></a></li>
+            </ul> -->
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="{% static 'img/bg.jpeg' %}">
+                </div>
+                <a href="#user"><img class="circle" src="{% static 'img/user.jpeg' %}"></a>
+                <a href="#name"><span class="white-text name">{{ user.username }}</span></a>
+                <a href="#email"><span class="white-text email">{{ user.email}}</span></a>
+               
+            </div>
+        </li>
+        <li><a class="" href=""><i class="material-icons">home</i> Home</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="" href=""><i class="material-icons">format_list_bulleted</i> recomended diet</a></li>
+        <!-- <li><a class="" href=""><i class="material-icons">add</i> Add New disease</a></li> -->
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="{% url 'user_logout' %}"><i class="material-icons">visibility_off</i> logout</a></li>
+
+    </ul>
+     <a href="#" data-target="slide-out" class="sidenav-trigger white-text" style="margin-top: 1rem;"><i
+            class="material-icons">menu</i></a>
+    {% comment %}
+    <!-- endnav --> {% endcomment %}
+</div>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 3.1
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================ -->
+
+<head>
+    {% load static %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description"
+        content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords"
+        content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Login Page |Mobile Nutrition Advisor </title>
+
+    <!-- Favicons-->
+    <link href="{% static 'fonts/font.css' %}" rel="stylesheet">
+    <link rel="icon" href="" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="">
+    <!-- For Windows Phone -->
+
+
+    <!-- CORE CSS-->
+
+    <link href="{% static 'css/materialized.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <script type="text/javascript" src="{% static 'js/jqueryajax.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/chartjs.min.js' %}"></script>
+    {% comment %}
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script> {% endcomment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    {% comment %}
+    <!-- Place this tag in your head or just before your close body tag. --> {% endcomment %}
+    {% comment %}
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> --> {% endcomment %}
+    <style>
+        body {
+            background-color: #dddddd;
+        }
+
+        #liHover:hover {
+            text-decoration: none;
+            background: white;
+        }
+
+        #sidenavLinks {
+            position: relative;
+            top: -4.25rem;
+            left: 3rem;
+        }
+
+        div#btnfooter {
+            margin-top: -2rem;
+            background: #efefef;
+        }
+/* 
+        #searchInput::placeholder {
+            padding: 20px;
+            color: #ffffff;
+            font-family: 'Roboto'sans-serif;
+        } */
+
+        .main-img img,
+        .imgs img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .imgs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 8px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in 1 forwards;
+        }
+
+        @media (max-width: 650px) {
+            #searchInput {
+                margin: 70px 90px 8px 30rem;
+                width: 10%;
+            }
+
+            /* #searchInput::placeholder {
+                padding: 0;
+                background-color: #fff;
+                height: auto;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- ================================================Scripts================================================ -->
+
+
+    <script type="text/javascript" src="{% static 'js/materialized.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.modal').modal();
+            $('.fixed-action-btn').floatingActionButton();
+            $('.dropdown-trigger').dropdown();
+            $('.materialboxed').materialbox();
+            $('.collapsible').collapsible();
+            $('.carousel').carousel();
+            $('.chips').chips();
+            $('.datepicker').datepicker({
+                maxDate: new Date(),
+            });
+        });
+
+    </script>
+</body>
+
+</html>
